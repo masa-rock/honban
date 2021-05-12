@@ -5,3 +5,6 @@ from django.template.response import TemplateResponse
 def index(request):
   return TemplateResponse(request,'toppage/index.html')
 # Create your views here.
+
+def test(request):
+  return TemplateResponse(request,'toppage/test.html')

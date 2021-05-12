@@ -8,4 +8,5 @@ app_name ='toppage'
 urlpatterns = [
     # パスの後ろに何も文字がなければ、viewsのIndexページに飛ばす
     path('', views.index),
+    path('test/', views.test,name='test')
 ]
