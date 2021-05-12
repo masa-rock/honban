@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>リアルシミュレーション</title>
-</head>
-<body>
-<h3>リアルシミュレーションで条件に当てはまった銘柄を抽出</h3>
+{% extends "toppage/base.html" %}
+{% block main %}
+<h4>リアルシミュレーションで条件に当てはまった銘柄を抽出</h4>
 
-  <h3>ボリバン+2σにタッチ</h3>
+  <p>ボリバン+2σにタッチ</p>
   <table>
     <tr>
       <th>コード</th>
@@ -25,8 +18,4 @@
     {% endfor %}
   </table>
 
-
-
-
-</html>
-</body>
+{% endblock %}

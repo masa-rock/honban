@@ -62,3 +62,23 @@ class  Realsimulationchoice(models.Model):
       bb = models.FloatField(null=True,blank=True)
       def __str__(self):
             return self.code
+
+class  Fandamental(models.Model):
+      id = models.IntegerField(primary_key=True) 
+      meigara = models.CharField(max_length=255)
+      code = models.CharField(max_length=255)
+      uriagetuuki1 = models.FloatField(null=True,blank=True)
+      uriagetuuki2 = models.FloatField(null=True,blank=True)
+      riekituuki1 = models.FloatField(null=True,blank=True)
+      riekituuki2 = models.FloatField(null=True,blank=True)
+      epstuuki1 = models.FloatField(null=True,blank=True)
+      epstuuki2 = models.FloatField(null=True,blank=True)
+      uriageshihanki1 =models.FloatField(null=True,blank=True)
+      uriageshihanki2 =models.FloatField(null=True,blank=True)
+      uriageshihanki3 =models.FloatField(null=True,blank=True)
+      riekishihanki1 =models.FloatField(null=True,blank=True)
+      riekishihanki2 =models.FloatField(null=True,blank=True)
+      riekishihanki3 =models.FloatField(null=True,blank=True)
+      epsshihanki1 =models.FloatField(null=True,blank=True)
+      epsshihanki2 =models.FloatField(null=True,blank=True)
+      epsshihanki3 =models.FloatField(null=True,blank=True)

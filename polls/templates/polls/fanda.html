@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ファンダメンタル</title>
+</head>
+<body>
+<h3>ファンだ抽出</h3>
+
+  <h3>直近四半期利益+100%超え</h3>
+  <table>
+    <tr>
+      <th>コード</th>
+      <th>銘柄名</th>
+      <th>直近四半期利益上昇率(%)</th>
+      <th>前々四半期利益上昇率(%)</th>
+    </tr>
+    {% for data in datas %}
+    <tr>
+      <th><a href="#">{{data.code}}</a></th>
+      <th>{{data.meigara}}</th>
+      <th>{{data.riekishihanki1}}</th>
+      <th>{{data.riekishihanki2}}</th>
+    </tr>
+    {% endfor %}
+  </table>
+
+
+
+
+</html>
+</body>

@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect, Http404
-from .models import Question, Choice, Realsimulation
+from .models import Question, Choice, Realsimulation,Fandamental
 from django.template import loader
 from django.urls import reverse
 from django.views import generic
@@ -53,4 +53,12 @@ def realsimulation(request):
 
     return render(request,"polls/real.html",{'datas': datas})
 
+def fandamentals(request):
 
+    condition = {
+        'riekishihanki1__gt':100,
+        'riekishihanki2__gt':100,
+    }
+    datas = Fandamental.objects.all().filter(**condition)
+
+    return render(request,"polls/fanda.html",{'datas': datas})
