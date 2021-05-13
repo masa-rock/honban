@@ -58,7 +58,10 @@ def fandamentals(request):
     condition = {
         'riekishihanki1__gt':100,
         'riekishihanki2__gt':100,
+        'riekituuki1__gt':100,
+        'riekituuki2__gt':100,
     }
     datas = Fandamental.objects.all().filter(**condition)
+    data_count = datas.count()
 
-    return render(request,"polls/fanda.html",{'datas': datas})
+    return render(request,"polls/fanda.html",{'datas': datas,'data_count':data_count})

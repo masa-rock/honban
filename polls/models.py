@@ -44,7 +44,7 @@ class  Realsimulation(models.Model):
             return self.code
 
 class  Realsimulationchoice(models.Model):
-      id = models.IntegerField(primary_key=True) 
+      id = models.IntegerField() 
       date = models.DateTimeField()
       open = models.FloatField(null=True,blank=True)
       high = models.FloatField(null=True,blank=True)
@@ -52,7 +52,7 @@ class  Realsimulationchoice(models.Model):
       close = models.FloatField(null=True,blank=True)
       volume = models.IntegerField(null=True,blank=True)
       currency = models.IntegerField(null=True,blank=True)
-      code = models.CharField(max_length=255)
+      code = models.CharField(max_length=255,primary_key=True)
       rsi = models.FloatField(null=True,blank=True)
       days50 = models.FloatField(null=True,blank=True)
       days150 = models.FloatField(null=True,blank=True)
@@ -60,13 +60,14 @@ class  Realsimulationchoice(models.Model):
       weeks20 = models.FloatField(null=True,blank=True)
       stdev = models.FloatField(null=True,blank=True)
       bb = models.FloatField(null=True,blank=True)
+      fandaid = models.ForeignKey("Fandamental",db_column='code',on_delete=models.CASCADE)
       def __str__(self):
             return self.code
 
-class  Fandamental(models.Model):
-      id = models.IntegerField(primary_key=True) 
+class Fandamental(models.Model):
+      id = models.IntegerField() 
       meigara = models.CharField(max_length=255)
-      code = models.CharField(max_length=255)
+      code = models.CharField(max_length=255,primary_key=True)
       uriagetuuki1 = models.FloatField(null=True,blank=True)
       uriagetuuki2 = models.FloatField(null=True,blank=True)
       riekituuki1 = models.FloatField(null=True,blank=True)
